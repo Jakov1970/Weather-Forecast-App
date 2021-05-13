@@ -15,7 +15,7 @@ export class CityForecastComponent implements OnInit {
   list: Weather[] = [];
 
   gradovi = ['berlin', 'london', 'moscow', 'madrid', 'paris'];
-
+  
   ngOnInit(): void {
     this.getCities();
   }
