@@ -4,6 +4,7 @@ import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { Weather } from '../models/weather';
 import { Subject } from 'rxjs';
+import { stringify } from '@angular/compiler/src/util';
 
 @Injectable({
   providedIn: 'root'
@@ -23,7 +24,7 @@ export class WeatherService {
     return this.http.get<any>(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8f21ea60d19c22715b81453e5aa37a6a`).pipe(map(x => {
       return {
         name: x.name,
-        temp: x.main.temp,
+        temp: parseInt(x.main.temp) - 273,
         wind: x.wind.speed
       };
     }));

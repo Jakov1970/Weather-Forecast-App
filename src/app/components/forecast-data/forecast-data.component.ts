@@ -21,7 +21,6 @@ export class ForecastDataComponent implements OnInit {
     this.dataWeather = [];
     this.weatherService.getNextWeather(name).subscribe( data => {
       this.showResults(data);
-      console.log(data)
     })
   }
 
@@ -35,6 +34,5 @@ export class ForecastDataComponent implements OnInit {
       })    
     }
   }
-
 
 }

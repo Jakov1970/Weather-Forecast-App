@@ -30,7 +30,6 @@ export class CityForecastComponent implements OnInit {
      this.weatherService.getCurrentWeather(i)
     .subscribe( data => {
       this.list.push(data);
-      console.log(data)
     });
   }
 
