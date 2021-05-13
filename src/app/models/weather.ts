@@ -1,9 +1,8 @@
 export interface Weather {
-    time?: any;  
+    time?: string;  
     name: string;
-    temp: number;
-    wind: number;
+    temp?: number;
+    wind?: number;
     tempMax?: string;
     tempMin?: string;
-    //id?: string;
 }
